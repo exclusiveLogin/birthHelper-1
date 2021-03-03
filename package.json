@@ -29,6 +29,9 @@
     "stylelint": "stylelint \"source/sass/**/*.scss\" --syntax scss",
     "test": "npm run editorconfig && npm run stylelint",
     "build": "gulp build",
+    "build:docker": "gulp build && docker build -t bh_guide .",
+    "run:docker": "docker run -p 8090:80 --rm -d bh_guide",
+    "run:docker:remote": "docker run -p 8090:80 --rm -d exclusivelogin/birthhelper-guide:latest",
     "start": "gulp"
   },
   "browserslist": [
