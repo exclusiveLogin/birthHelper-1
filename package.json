@@ -29,7 +29,7 @@
     "stylelint": "stylelint \"source/sass/**/*.scss\" --syntax scss",
     "test": "npm run editorconfig && npm run stylelint",
     "build": "gulp build",
-    "docker:build": "gulp build && sudo docker build -t exclusivelogin/birthhelper-guide .",
+    "docker:build": "npm i && gulp build && sudo docker build -t exclusivelogin/birthhelper-guide .",
     "docker:publish": "npm run docker:build && sudo docker login && sudo docker push exclusivelogin/birthhelper-guide",
     "docker:run": "docker run -p 8090:80 --rm -d exclusivelogin/birthhelper-guide",
     "start": "gulp"
